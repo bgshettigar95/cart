@@ -36,7 +36,6 @@ const reducer = (state, action) => {
 
     if (action.type == DISPLAY_ITEMS) {
         const cartItems = action.payload.cart.map((item) => [item.id, item]);
-        console.log({ ...state, loading: false, cart: new Map(cartItems) });
         return { ...state, loading: false, cart: new Map(cartItems) }
     }
 
